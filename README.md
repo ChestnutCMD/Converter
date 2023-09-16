@@ -10,3 +10,4 @@ GET /api/rates?from=USD&to=RUB&value=1
 "result": 62.16
 
 }
+<br>
