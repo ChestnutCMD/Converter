@@ -21,9 +21,12 @@ class Converter:
 
     def __parse_filter(self, country_code) -> list:
         """Фильтрация валюты по ее коду, возвращает курс в рублях"""
-        soup = self.__parse(self.url)
-        countries = soup.find('tr', {"data-currency-code": country_code.upper()})
-        result = countries.text.split()
+        if country_code == "RUB":
+            result = [1, "RUB"]
+        else:
+            soup = self.__parse(self.url)
+            countries = soup.find('tr', {"data-currency-code": country_code.upper()})
+            result = countries.text.split()
         return result
 
     def calculation(self):
