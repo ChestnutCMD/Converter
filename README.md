@@ -12,6 +12,7 @@ GET /api/rates?from=USD&to=RUB&value=1
 
 }
 </p>
+
 # docker
 <p>docker pull cheshtnut/converter:v1.0</p>
 <p>docker container run -d -p 4000:5000 cheshtnut/converter:v1.0</p>
